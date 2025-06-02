@@ -269,6 +269,10 @@ label[for='contact-method'] {
   color: rgba(255, 255, 255, 0.9);
 }
 
+option {
+  background-color: #090429;
+}
+
 /* ===== Buttons ===== */
 button {
   cursor: pointer;
