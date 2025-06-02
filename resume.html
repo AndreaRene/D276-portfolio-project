@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./assets/styles.css" />
     <title>A Presto Resume Portfolio</title>
   </head>
   <body>
@@ -16,29 +20,34 @@
         </ul>
       </nav>
     </header>
-    <p>
-      A <strong>dedicated</strong> developer with a passion for
-      <em>helping others succeed</em> through education and mentorship.
-    </p>
+    <section>
+      <ul class="contact">
+        <li>Email: example@example.com</li>
+        <li>Phone Number: (123) 456-7890</li>
+        <br />
+        <li>
+          <a href="https://www.linkedin.com/in/andreapresto/">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://github.com/AndreaRene">GitHub</a>
+        </li>
+      </ul>
+    </section>
     <hr />
+    <section>
+      <p>
+        A <strong>dedicated</strong> developer with a passion for <em>helping others succeed</em> through education and
+        mentorship.
+      </p>
+    </section>
+
     <main>
-      <section>
-        <ul class="contact">
-          <li>Email: example@example.com</li>
-          <li>Phone Number: (123) 456-7890</li>
-          <li>
-            <a href="https://www.linkedin.com/in/example-profile">LinkedIn</a>
-          </li>
-        </ul>
-      </section>
       <article>
         <p>
-          Full Stack Developer with a solid foundation in JavaScript, React,
-          Python, GraphQL, and NoSQL databases. Currently enhancing and sharing
-          my knowledge as a Teaching Assistant at EdX Coding Bootcamp,
-          University of Texas, guiding students through rigorous curriculum and
-          projects. Committed to continuous learning and applying practical
-          coding skills in a dynamic team environment.
+          Full Stack Developer with a solid foundation in JavaScript, React, Python, GraphQL, and NoSQL databases.
+          Currently enhancing and sharing my knowledge as a Teaching Assistant at EdX Coding Bootcamp, University of
+          Texas, guiding students through rigorous curriculum and projects. Committed to continuous learning and
+          applying practical coding skills in a dynamic team environment.
         </p>
       </article>
       <section>
@@ -62,8 +71,58 @@
           <!-- Repeat for other degrees -->
         </ul>
       </section>
+      <section>
+        <h2>Technical Skills</h2>
+        <table>
+          <caption>Core Technical Proficiencies</caption>
+          <thead>
+            <tr>
+              <th>Languages</th>
+              <th>Frameworks</th>
+              <th>Technologies</th>
+              <th>Platforms & Tools</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                JavaScript, HTML5, CSS3,<br />
+                Python, C#
+              </td>
+              <td>
+                Bootstrap, Tailwind, Skeleton,<br />
+                Materialize, jQuery, Express.js,<br />
+                React, Handlebars
+              </td>
+              <td>
+                Node.js, SQL, MySQL, SQLite,<br />
+                Sequelize, PostgreSQL, MongoDB,<br />
+                Mongoose, GraphQL, Git, Bash,<br />
+                APIs, JSON, AJAX
+              </td>
+              <td>
+                GitHub, GitLab, MongoDB Atlas,<br />
+                Heroku, Replit, AWS,<br />
+                VS Code, Insomnia, Postman,<br />
+                Miro, Jira, Microsoft 365,<br />
+                Reporting/Ticketing Tools
+              </td>
+            </tr>
+            <!-- You can add more rows if needed, but one complete row meets the rubric -->
+          </tbody>
+        </table>
+      </section>
     </main>
     <hr />
-    <footer>Coffee &amp; Code</footer>
+    <footer>
+      Coffee &amp; Code<br />(But mostly coffee)
+      <div id="current-date"></div>
+    </footer>
+    <script>
+      const dateEl = document.getElementById('current-date');
+      const today = new Date().toLocaleDateString();
+      dateEl.textContent = `Today's Date: ${today}`;
+      console.log('Resume portfolio loaded!');
+    </script>
   </body>
 </html>

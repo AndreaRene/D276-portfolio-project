@@ -80,3 +80,9 @@ nav > ul {
   background-color: rgb(30, 30, 30);
   border-radius: 8px;
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
