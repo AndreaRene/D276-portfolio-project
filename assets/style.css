@@ -273,6 +273,12 @@ option {
   background-color: #090429;
 }
 
+.form-note {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
 /* ===== Buttons ===== */
 button {
   cursor: pointer;
