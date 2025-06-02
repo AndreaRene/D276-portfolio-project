@@ -2,8 +2,95 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Presto Cover Letter</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./assets/styles.css" />
+    <title>A Presto Resume Portfolio</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <section class="logo">
+        <img
+          src="./assets/media/avatarthumb.png"
+          alt="Logo of Andrea Rene Presto"
+          width="50px" />
+        <h1> Andrea <span>Ren&eacute;</span> Presto</h1>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="resume.html">Resume</a></li>
+          <li class="current">Cover Letter</li>
+          <li><a href="career-goals.html">Career Goals</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <ul class="contact">
+        <li>Email: example@example.com</li>
+        <li>Phone Number: (123) 456-7890</li>
+        <br />
+        <li>
+          <a href="https://www.linkedin.com/in/andreapresto/">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://github.com/AndreaRene">GitHub</a>
+        </li>
+      </ul>
+    </section>
+    <hr />
+    <section>
+      <p>
+        A <strong>dedicated</strong> developer with a passion for <em>helping others succeed</em> through education and
+        mentorship.
+      </p>
+    </section>
+
+    <main>
+      <article>
+        <p>Dear Hiring Manager,</p>
+
+        <p>
+          I’m excited to apply for the Full Stack Developer position at your company. With a strong foundation in
+          <mark>JavaScript</mark>, <mark>React</mark>, <mark>Python</mark>, and both SQL and NoSQL databases, I bring a
+          practical, hands-on approach to building real-world applications that are functional, scalable, and
+          user-friendly.
+        </p>
+
+        <p>
+          In my current role as a Teaching Assistant for the EdX Full Stack Coding Bootcamp at the University of Texas,
+          I support adult learners as they pivot into tech careers. This experience has sharpened my technical skills,
+          improved my ability to explain complex concepts clearly, and reminded me daily why collaboration and
+          mentorship matter.
+        </p>
+
+        <p>
+          I'm passionate about writing clean, maintainable code, working with diverse teams, and always learning
+          something new. Whether it's debugging a GraphQL resolver or guiding someone through their first deployment, I
+          bring curiosity, patience, and a solid problem-solving mindset to every challenge.
+        </p>
+
+        <p>
+          I’d love the opportunity to bring that mindset to your team and help build great software with real impact.
+          Thank you for considering my application — I look forward to hearing from you.
+        </p>
+
+        <p>Sincerely,</p>
+        <p>Andrea Ren&eacute; Presto</p>
+      </article>
+    </main>
+    <hr />
+    <footer>
+      Coffee &amp; Code<br />(But mostly coffee)
+      <div id="current-date"></div>
+    </footer>
+    <script>
+      const dateEl = document.getElementById('current-date');
+      const today = new Date().toLocaleDateString();
+      dateEl.textContent = `Today's Date: ${today}`;
+      console.log('Resume portfolio loaded!');
+    </script>
+  </body>
 </html>
