@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="./assets/styles.css" />
+      href="./assets/style.css" />
     <title>A Presto Resume Portfolio</title>
   </head>
   <body>
@@ -59,88 +59,121 @@
     </section>
 
     <main>
-      <form
-        action="https://wp.zybooks.com/form-viewer.php"
-        method="post">
-        <fieldset>
-          <legend>Contact Me</legend>
-          <label for="first-name">First Name:</label>
-          <input
-            type="text"
-            id="first-name"
-            name="first-name"
-            required />
-          <br />
-          <label for="last-name">Last Name:</label>
-          <input
-            type="text"
-            id="last-name"
-            name="last-name"
-            required />
-          <br />
-          <label for="company-name">Company Name:</label>
-          <input
-            type="text"
-            id="company-name"
-            name="company-name" />
-          <br />
-          <label for="email">Email Address:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required />
-          <br />
-          <label for="phone">Phone Number:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone" />
-          <br />
-          <label for="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            cols="50"></textarea>
-          <br />
-          <p>Best Contact Time:</p>
-          <label>
+      <p>
+        Greetings, traveler. Thank you for your correspondence request from The Scry Hard Institute. Use this scroll to
+        contact the Mage Guild.
+      </p>
+      <button id="reveal-form">Contact the Guild</button>
+      <div
+        id="form-container"
+        style="display: none">
+        <form
+          action="https://wp.zybooks.com/form-viewer.php"
+          method="post">
+          <fieldset>
+            <legend>Arcane Correspondence Request</legend>
+
+            <p>
+              Please do not channel fire-based incantations near this form — the archives are still smoldering from the
+              last incident.
+            </p>
+
+            <label for="first-name">Given Name:</label>
             <input
-              type="radio"
-              name="contact-time"
-              value="am"
-              required />
-            a.m.
-          </label>
-          <label>
+              type="text"
+              id="first-name"
+              name="first-name"
+              required
+              placeholder="First Name" />
+            <br />
+
+            <label for="last-name">Family Name:</label>
             <input
-              type="radio"
-              name="contact-time"
-              value="pm" />
-            p.m.
-          </label>
-          <label>
+              type="text"
+              id="last-name"
+              name="last-name"
+              required
+              placeholder="Last Name" />
+            <br />
+
+            <label for="company-name">Guild or Order:</label>
             <input
-              type="radio"
-              name="contact-time"
-              value="anytime" />
-            Anytime
-          </label>
-          <br />
-          <label for="contact-method">Preferred Contact Method:</label>
-          <select
-            id="contact-method"
-            name="contact-method"
-            required>
-            <option value="phone">Phone</option>
-            <option value="email">Email</option>
-            <option value="text">Text</option>
-          </select>
-          <br />
-          <button type="submit">Submit</button>
-        </fieldset>
-      </form>
+              type="text"
+              id="company-name"
+              name="company-name"
+              placeholder="Company or Organization" />
+            <br />
+
+            <label for="email">Spellbound Courier Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Email" />
+            <br />
+
+            <label for="phone">Crystal Ball Frequency:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number" />
+            <br />
+
+            <label for="message">Your Missive:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              cols="50"
+              placeholder="Your Message"></textarea>
+            <br />
+
+            <p>Preferred Time for Divinatory Contact:</p>
+            <label>
+              <input
+                type="radio"
+                name="contact-time"
+                value="am"
+                required />
+              At First Light
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="contact-time"
+                value="pm" />
+              As Shadows Stretch
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="contact-time"
+                value="anytime" />
+              Whenever the Ley Lines Align
+            </label>
+            <br />
+
+            <label for="contact-method">How Shall the Guild Reach Thee?</label>
+            <select
+              id="contact-method"
+              name="contact-method"
+              required>
+              <option value="phone">Phone</option>
+              <option value="email">Email</option>
+              <option value="text">Text</option>
+            </select>
+            <br />
+
+            <button
+              type="submit"
+              aria-label="Submit your form to the Guild"
+              >Dispatch the Raven</button
+            >
+          </fieldset>
+        </form>
+      </div>
     </main>
     <hr />
     <footer>
@@ -160,6 +193,16 @@
       const today = new Date().toLocaleDateString();
       dateEl.textContent = `Today's Date: ${today}`;
       console.log('Welcome to the chaos. Andrea’s resume site is live.');
+
+      document.getElementById('reveal-form').addEventListener('click', () => {
+        document.getElementById('form-container').style.display = 'block';
+        document.getElementById('reveal-form').style.display = 'none';
+
+        const music = new Audio('./assets/media/the-tavern-beats.mp3');
+        music.loop = true;
+        music.volume = 0.6;
+        music.play();
+      });
     </script>
   </body>
 </html>
