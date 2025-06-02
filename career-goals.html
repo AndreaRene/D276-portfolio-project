@@ -20,49 +20,72 @@
         <h1> Andrea <span>Ren&eacute;</span> Presto</h1>
       </section>
       <nav>
-        <ul>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="coverletter.html">Cover Letter</a></li>
+        <ul class="nav-list">
+          <li
+            ><a
+              href="resume.html"
+              class="nav-link"
+              >Resume</a
+            ></li
+          >
+          <li
+            ><a
+              href="coverletter.html"
+              class="nav-link"
+              >Cover Letter</a
+            ></li
+          >
           <li class="current">Career Goals</li>
         </ul>
       </nav>
     </header>
     <section>
       <ul class="contact">
-        <li>Email: example@example.com</li>
-        <li>Phone Number: (123) 456-7890</li>
-        <br />
+        <li>Email: example@example.com</li
+        >|
+        <li>Phone Number: (123) 456-7890</li
+        >|
         <li>
           <a
             href="https://www.linkedin.com/in/andreapresto/"
             target="_blank"
             rel="noopener"
-            >LinkedIn</a
-          >
-        </li>
+            >https://www.linkedin.com/in/andreapresto</a
+          > </li
+        >|
         <li>
           <a
             href="https://github.com/AndreaRene"
             target="_blank"
             rel="noopener"
-            >GitHub</a
+            >https://github.com/AndreaRene</a
           >
         </li>
       </ul>
     </section>
     <hr />
     <section>
-      <p>
+      <p class="short-intro">
         A <strong>dedicated</strong> developer with a passion for <em>helping others succeed</em> through education and
         mentorship.
       </p>
     </section>
 
     <main>
-      <p>
-        Greetings, traveler. Thank you for your correspondence request from The Scry Hard Institute. Use this scroll to
-        contact the Mage Guild.
+      <p class="form-intro">
+        Greetings, traveler. Thank you for your correspondence request from The Scry Hard Institute...
       </p>
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="wizard-video">
+        <source
+          src="./assets/media/wizard.mp4"
+          type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <button id="reveal-form">Contact the Guild</button>
       <div
         id="form-container"
@@ -130,29 +153,32 @@
               placeholder="Your Message"></textarea>
             <br />
 
-            <p>Preferred Time for Divinatory Contact:</p>
-            <label>
-              <input
-                type="radio"
-                name="contact-time"
-                value="am"
-                required />
-              At First Light
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="contact-time"
-                value="pm" />
-              As Shadows Stretch
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="contact-time"
-                value="anytime" />
-              Whenever the Ley Lines Align
-            </label>
+            <p class="pref-time">Preferred Time for Divinatory Contact:</p>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input
+                  type="radio"
+                  name="contact-time"
+                  value="am"
+                  required />
+                At First Light
+              </label>
+              <label class="radio-option">
+                <input
+                  type="radio"
+                  name="contact-time"
+                  value="pm" />
+                As Shadows Stretch
+              </label>
+              <label class="radio-option">
+                <input
+                  type="radio"
+                  name="contact-time"
+                  value="anytime" />
+                Whenever the Ley Lines Align
+              </label>
+            </div>
+
             <br />
 
             <label for="contact-method">How Shall the Guild Reach Thee?</label>
@@ -175,6 +201,7 @@
         </form>
       </div>
     </main>
+    <div id="satisfy-the-rubric"></div>
     <hr />
     <footer>
       <p
@@ -182,10 +209,11 @@
           href="https://www.gateworld.net/wiki/Comtrya"
           target="_blank"
           rel="noopener"
+          class="secret-link"
           >Comtrya!</a
         ></p
       >
-      <p>Coffee &amp; Code<br />(But mostly coffee)</p>
+      <p>You have reached the bottom!</p>
       <div id="current-date"></div>
     </footer>
     <script>

@@ -20,46 +20,59 @@
         <h1> Andrea <span>Ren&eacute;</span> Presto</h1>
       </section>
       <nav>
-        <ul>
+        <ul class="nav-list">
           <li class="current">Resume</li>
-          <li><a href="coverletter.html">Cover Letter</a></li>
-          <li><a href="career-goals.html">Career Goals</a></li>
+          <li
+            ><a
+              href="coverletter.html"
+              class="nav-link"
+              >Cover Letter</a
+            ></li
+          >
+          <li
+            ><a
+              href="career-goals.html"
+              class="nav-link"
+              >Career Goals</a
+            ></li
+          >
         </ul>
       </nav>
     </header>
     <section>
       <ul class="contact">
-        <li>Email: example@example.com</li>
-        <li>Phone Number: (123) 456-7890</li>
-        <br />
+        <li>Email: example@example.com</li
+        >|
+        <li>Phone Number: (123) 456-7890</li
+        >|
         <li>
           <a
             href="https://www.linkedin.com/in/andreapresto/"
             target="_blank"
             rel="noopener"
-            >LinkedIn</a
-          >
-        </li>
+            >https://www.linkedin.com/in/andreapresto</a
+          > </li
+        >|
         <li>
           <a
             href="https://github.com/AndreaRene"
             target="_blank"
             rel="noopener"
-            >GitHub</a
+            >https://github.com/AndreaRene</a
           >
         </li>
       </ul>
     </section>
     <hr />
     <section>
-      <p>
+      <p class="short-intro">
         A <strong>dedicated</strong> developer with a passion for <em>helping others succeed</em> through education and
         mentorship.
       </p>
     </section>
 
-    <main>
-      <article>
+    <main class="resume">
+      <article class="intro">
         <p>
           Full Stack Developer with a solid foundation in JavaScript, React, Python, GraphQL, and NoSQL databases.
           Currently enhancing and sharing my knowledge as a Teaching Assistant at EdX Coding Bootcamp, University of
@@ -90,7 +103,7 @@
         <article>
           <h3>Managing Member – ThirdStack Solutions LLC (2024 – Present)</h3>
           <p
-            ><a
+            ></p><a
               href="https://www.thirdstacksolutions.com"
               target="_blank"
               rel="noopener"
@@ -131,25 +144,17 @@
           <p>
             Authored educational articles for new developers on version control, critical thinking, and core programming
             concepts.<br />
-            <a
+            Vew my <a
               href="https://www.linkedin.com/in/andreapresto/recent-activity/articles/"
               target="_blank"
               rel="noopener"
-              >View Articles</a
+              >Articles</a
             >
           </p>
         </article>
 
         <article>
           <h3>TarotDeck (In Progress)</h3>
-          <p
-            ><a
-              href="https://github.com/AndreaRene/tarot-application"
-              target="_blank"
-              rel="noopener"
-              >GitHub Repository</a
-            ></p
-          >
           <ul>
             <li>Lead a team of developers, overseeing architecture, database design, and AWS integration.</li>
             <li>Implemented a dual-database system using MongoDB Atlas for dynamic and static data separation.</li>
@@ -162,7 +167,7 @@
         <article>
           <h3>Peace of Mind V_2</h3>
           <p
-            ><a
+            >View the <a
               href="https://peace-of-mind-app-v2.herokuapp.com/"
               target="_blank"
               rel="noopener"
@@ -180,11 +185,21 @@
         <article>
           <h3>Trivia on the Rocks</h3>
           <p
-            ><a
+            >View the
+            <a
               href="https://github.com/AndreaRene/Trivia_on_the_rocks"
               target="_blank"
               rel="noopener"
               >GitHub Repository</a
+            ></p
+          >
+          <p
+            >View the
+            <a
+              href="https://andrearene.github.io/Trivia_on_the_rocks/"
+              target="_blank"
+              rel="noopener"
+              >Live App</a
             ></p
           >
           <ul>
@@ -195,7 +210,7 @@
         </article>
       </section>
 
-      <section>
+      <section class="skillz">
         <h2>Technical Skills</h2>
         <table>
           <caption>Core Technical Proficiencies</caption>
@@ -236,6 +251,7 @@
         </table>
       </section>
     </main>
+    <div id="satisfy-the-rubric"></div>
     <hr />
     <footer>
       <p
@@ -243,12 +259,14 @@
           href="https://www.gateworld.net/wiki/Comtrya"
           target="_blank"
           rel="noopener"
+          class="secret-link"
           >Comtrya!</a
         ></p
       >
-      <p>Coffee &amp; Code<br />(But mostly coffee)</p>
+      <p>You have reached the bottom!</p>
       <div id="current-date"></div>
     </footer>
+
     <script>
       const dateEl = document.getElementById('current-date');
       const today = new Date().toLocaleDateString();

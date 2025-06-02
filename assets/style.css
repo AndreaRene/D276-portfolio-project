@@ -1,4 +1,4 @@
-/* CSS Reset */
+/* ===== CSS RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -10,68 +10,75 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   background-color: rgb(9, 4, 41);
-  color: rgb(209, 206, 206);
-  padding: 1rem;
+  color: rgb(220, 220, 220);
+  line-height: 1.6;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* ===== Typography ===== */
+h1,
+h2,
+h3 {
+  color: rgb(240, 128, 128);
+  margin-bottom: 0.5rem;
 }
 
-ul,
-ol {
-  list-style: none;
+h2 {
+  border-bottom: 2px solid rgb(187, 25, 106);
+  padding-bottom: 0.2rem;
+  margin-top: 2rem;
 }
 
+p,
+li {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== Links & Interactive ===== */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
+a:hover,
+a:focus {
+  text-decoration: underline;
+  color: rgb(255, 200, 150);
 }
-
-span {
-  color: rgb(187, 25, 106);
-}
-
-/* Layout */
-.container {
+/* ===== Navigation ===== */
+.nav-list {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  gap: 1rem;
 }
+
+.nav-link {
+  color: rgb(187, 25, 106);
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: rgb(240, 128, 128);
+  text-decoration: underline;
+}
+
+.current {
+  color: rgb(220, 220, 220);
+  font-weight: bold;
+}
+/* ===== Layout & Components ===== */
 .header {
+  width: 900px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-  /* padding: 20px; */
+  margin: 1rem auto;
 }
-
-nav > ul {
-  display: flex;
-  gap: 20px;
-}
-.footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Main Content */
 
 .logo {
   display: flex;
@@ -84,16 +91,229 @@ nav > ul {
   height: 50px;
   border-radius: 50%;
 }
-.main {
+
+.short-intro {
+  font-size: 1.2rem;
+  color: rgb(255, 200, 150);
+  text-align: center;
+}
+
+main {
+  flex: 1;
   max-width: 800px;
   width: 100%;
-  padding: 20px;
-  background-color: rgb(30, 30, 30);
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
 }
 
+.resume li {
+  margin-left: 1.5rem;
+}
+
+.resume a {
+  color: rgb(187, 25, 106);
+  font-weight: bold;
+}
 .contact {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+/* ===== Table Styling ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cover-letter {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 800px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  font-family: Georgia, serif;
+  box-shadow: 0 0 25px rgba(255, 200, 150, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.cover-letter:hover {
+  box-shadow: 0 0 35px rgba(255, 200, 150, 0.15);
+}
+
+.cover-letter mark {
+  background-color: rgba(255, 200, 150, 0.2);
+  padding: 0 0.3rem;
+  border-radius: 3px;
+  font-weight: bold;
+  color: rgb(255, 200, 150);
+}
+
+.form-intro {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  border-radius: 8px;
+  font-style: italic;
+  text-align: center;
+  color: rgb(255, 200, 150);
+  margin: 0 auto 1rem;
+}
+
+.wizard-video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin: 2rem auto;
+  display: block;
+  box-shadow: 0 0 20px rgba(187, 25, 106, 0.5);
+}
+
+#pre-form-content {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend,
+.pref-time {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(255, 200, 150);
+  margin-bottom: 0.5rem;
+}
+
+label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+  color: rgb(255, 200, 150);
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 0.85rem;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-size: 1rem;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='radio'] {
+  width: auto;
+  margin-right: 0.4rem;
+  accent-color: rgb(187, 25, 106);
+}
+
+label[for='contact-method'] {
+  margin-top: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== Buttons ===== */
+button {
+  cursor: pointer;
+  border: none;
+  background-color: rgb(187, 25, 106);
+  color: rgb(9, 4, 41);
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  box-shadow: rgba(196, 41, 131, 0.5) 0px 10px 20px;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background-color: rgb(255, 200, 150);
+}
+
+/* ===== Utility ===== */
+hr {
+  border: none;
+  border-top: 1px solid rgb(50, 50, 50);
+  margin: 20px auto;
+  width: 80%;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+#satisfy-the-rubric {
+  margin-top: 0.5rem;
+}
+
+/* ===== Special Styles ===== */
+span {
+  color: rgb(187, 25, 106);
+}
+
+.secret-link {
+  color: rgb(240, 128, 128);
+  font-size: 1.5rem;
 }
