@@ -2,12 +2,164 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./assets/styles.css" />
+    <title>A Presto Resume Portfolio</title>
   </head>
   <body>
-    <header>
-      <nav></nav>
+    <header class="header">
+      <section class="logo">
+        <img
+          src="./assets/media/avatarthumb.png"
+          alt="Logo of Andrea Rene Presto"
+          width="50px" />
+        <h1> Andrea <span>Ren&eacute;</span> Presto</h1>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="coverletter.html">Cover Letter</a></li>
+          <li class="current">Career Goals</li>
+        </ul>
+      </nav>
     </header>
+    <section>
+      <ul class="contact">
+        <li>Email: example@example.com</li>
+        <li>Phone Number: (123) 456-7890</li>
+        <br />
+        <li>
+          <a
+            href="https://www.linkedin.com/in/andreapresto/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/AndreaRene"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+    </section>
+    <hr />
+    <section>
+      <p>
+        A <strong>dedicated</strong> developer with a passion for <em>helping others succeed</em> through education and
+        mentorship.
+      </p>
+    </section>
+
+    <main>
+      <form
+        action="https://wp.zybooks.com/form-viewer.php"
+        method="post">
+        <fieldset>
+          <legend>Contact Me</legend>
+          <label for="first-name">First Name:</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            required />
+          <br />
+          <label for="last-name">Last Name:</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            required />
+          <br />
+          <label for="company-name">Company Name:</label>
+          <input
+            type="text"
+            id="company-name"
+            name="company-name" />
+          <br />
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required />
+          <br />
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone" />
+          <br />
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="50"></textarea>
+          <br />
+          <p>Best Contact Time:</p>
+          <label>
+            <input
+              type="radio"
+              name="contact-time"
+              value="am"
+              required />
+            a.m.
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="contact-time"
+              value="pm" />
+            p.m.
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="contact-time"
+              value="anytime" />
+            Anytime
+          </label>
+          <br />
+          <label for="contact-method">Preferred Contact Method:</label>
+          <select
+            id="contact-method"
+            name="contact-method"
+            required>
+            <option value="phone">Phone</option>
+            <option value="email">Email</option>
+            <option value="text">Text</option>
+          </select>
+          <br />
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </main>
+    <hr />
+    <footer>
+      <p
+        ><a
+          href="https://www.gateworld.net/wiki/Comtrya"
+          target="_blank"
+          rel="noopener"
+          >Comtrya!</a
+        ></p
+      >
+      <p>Coffee &amp; Code<br />(But mostly coffee)</p>
+      <div id="current-date"></div>
+    </footer>
+    <script>
+      const dateEl = document.getElementById('current-date');
+      const today = new Date().toLocaleDateString();
+      dateEl.textContent = `Today's Date: ${today}`;
+      console.log('Welcome to the chaos. Andrea’s resume site is live.');
+    </script>
   </body>
 </html>
