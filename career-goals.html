@@ -90,7 +90,9 @@
       <div
         id="form-container"
         style="display: none">
-        <form id="wizard-form">
+        <form
+          action="https://wp.zybooks.com/form-viewer.php"
+          method="post">
           <fieldset>
             <legend>Arcane Correspondence Request</legend>
 
@@ -228,15 +230,6 @@
         music.loop = true;
         music.volume = 0.6;
         music.play();
-
-        document.getElementById('wizard-form').addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          alert('✨ Your raven has been dispatched! ✨');
-
-          // Clear all the form fields
-          e.target.reset();
-        });
       });
     </script>
   </body>
